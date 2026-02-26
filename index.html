@@ -97,24 +97,6 @@
       opacity: 0.92;
       line-height: 1.5;
     }
-    .btn {
-      margin: 30px 12px;
-      padding: 16px 40px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 12px;
-      color: white;
-      font-size: 1.15rem;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s;
-      backdrop-filter: blur(6px);
-    }
-    .btn:hover {
-      background: rgba(255,255,255,0.25);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    }
     .section {
       margin: 70px 0;
       padding: 0 20px;
@@ -154,6 +136,18 @@
       font-size: 0.95rem;
       opacity: 0.75;
       border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .contact-info {
+      margin: 40px 0;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+    .email-link {
+      color: #ffd700;
+      text-decoration: none;
+    }
+    .email-link:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
@@ -196,10 +190,10 @@
       A high-value .green domain at the intersection of quantum computing and sustainable energy – ideal for fusion, grid optimization, renewable efficiency, and quantum-powered clean tech.
     </p>
 
-    <a class="btn" href="mailto:cybersec@securida.info?subject=Inquiry%20about%20quantumenergy.green"
-       aria-label="Susisiekti dėl domeno pirkimo">
-      Inquire / Susisiekti
-    </a>
+    <div class="contact-info">
+      <strong data-lt="Susisiekite:" data-en="Contact:"></strong>
+      <a href="mailto:cybersec@securida.info" class="email-link">cybersec@securida.info</a>
+    </div>
 
     <div class="section">
       <h2 data-lt="Kodėl šis domenas vertingas"
@@ -224,9 +218,6 @@
          data-en="Escrow services available (Escrow.com, Sedo, DAN.com, etc.). Response within 24 hours.">
         Escrow services available (Escrow.com, Sedo, DAN.com, etc.). Response within 24 hours.
       </p>
-      <p style="margin-top:20px;">
-        <strong>Contact:</strong> <a href="mailto:cybersec@securida.info" style="color:#ffd700;">cybersec@securida.info</a>
-      </p>
     </div>
 
     <footer>
@@ -236,7 +227,7 @@
   </main>
 
   <script>
-    let currentLang = "en"; // pradžioje anglų, nes domenas tarptautinis
+    let currentLang = "en"; // pradžioje anglų kalba
     function toggleLang() {
       currentLang = currentLang === "lt" ? "en" : "lt";
       document.documentElement.lang = currentLang;
@@ -244,7 +235,6 @@
         el.textContent = el.dataset[currentLang];
       });
     }
-    // jei nori pradėti lietuviškai – pakeisk currentLang = "lt";
   </script>
 
 </body>
